@@ -1,0 +1,26 @@
+<p>servers works!</p>
+
+<!-- use component -->
+<app-server></app-server>
+<app-server></app-server>
+
+<!-- use attribute -->
+<div app-server-attribute></div>
+
+<!-- use class -->
+<div class="app-server-class"></div>
+
+
+<label>Server Name</label>
+<!-- Two way data binding -->
+<input 
+        [disabled]="!allowNewServer"
+        [(ngModel)]="serverName">
+<p>{{ serverName }}</p>
+
+<button class="btn btn-primary"
+        [disabled]="!allowNewServer"
+        (click)="onCreateServer()">
+        Add new Server
+</button>
+<p>{{ serverCreationStatus }}</p>
